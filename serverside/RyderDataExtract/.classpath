@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/debugger-app-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/fontbox-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/pdfbox-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/pdfbox-app-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/pdfbox-debugger-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/pdfbox-tools-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/preflight-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/preflight-app-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/John/Desktop/RyderHub.ml/serverside/cc/xmpbox-2.0.8.jar"/>
+	<classpathentry kind="output" path="out/production/RyderDataExtract"/>
+</classpath>
