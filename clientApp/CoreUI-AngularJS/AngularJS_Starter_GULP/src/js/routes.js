@@ -57,6 +57,7 @@ angular
   .state('app.main', {
     url: '/dashboard',
     templateUrl: 'views/main.html',
+    controller: 'DashboardController',
     //page title goes here
     ncyBreadcrumb: {
       label: 'Home',
@@ -80,7 +81,10 @@ angular
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load controllers
         return $ocLazyLoad.load({
-          files: ['js/controllers/main.js']
+          files: [
+            'js/controllers/main.js',
+            'js/controllers/DashboardController.js'
+          ]
         });
       }]
     }
@@ -107,11 +111,13 @@ angular
   // Additional Pages
   .state('appSimple.login', {
     url: '/login',
-    templateUrl: 'views/pages/login.html'
+    templateUrl: 'views/pages/login.html',
+    controller: 'LoginController'
   })
   .state('appSimple.register', {
     url: '/register',
-    templateUrl: 'views/pages/register.html'
+    templateUrl: 'views/pages/register.html',
+    controller: 'RegisterController'
   })
   .state('appSimple.404', {
     url: '/404',

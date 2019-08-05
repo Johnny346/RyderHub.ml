@@ -12723,3 +12723,9 @@ hr.transparent {
       float: left; }
   *[dir="rtl"] .callout-default {
     border-right-color: #536c79; }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637; }
+
+input.ng-valid.ng-touched {
+  border: 1px solid #509D12; }

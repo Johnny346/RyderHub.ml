@@ -1,0 +1,9 @@
+Documentation re ryderhub build process / steps
+Client server location
+~/Desktop/RyderHub.ml/clientApp/CoreUI-AngularJS/AngularJS_Starter_GULP $ 
+
+Cmd to start client server: 
+sudo npm run serve
+
+
+
