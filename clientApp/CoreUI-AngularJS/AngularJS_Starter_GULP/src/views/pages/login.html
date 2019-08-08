@@ -7,15 +7,16 @@
 
             <div class="card-body">
               <h1>Login</h1>
-              <p>{{ user.password }}</p>
+              <p ng-show="message">{{ message }}</p>
               <p class="text-muted">Sign In to your account</p>
-              <form name='loginForm' novalidate>
+              <form name='loginForm' 
+              ng-submit="login()" novalidate>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="icon-user"></i></span>
                     </div>
                     <input type="email" name="email" class="form-control" placeholder="Email"
-                    ng-model="user.email" ng-reguired="true" >
+                    ng-model="user.email" ng-reguired="true" required pattern=".{5,}">
                   </div>
                   <p class="error validationerror" ng-show="loginForm.email.$invalid && loginForm.email.$touched">
                       Must be a valid email
@@ -25,14 +26,14 @@
                       <span class="input-group-text"><i class="icon-lock"></i></span>
                     </div>
                     <input type="password" name="password" class="form-control" placeholder="Password"
-                    ng-model="user.password" ng-reguired="true">
+                    ng-model="user.password" ng-reguired="true" required pattern=".{8,}">
                   </div>
-                  <p class="error validationerror" ng-show="loginForm.password.$invalid && loginForm.email.$touched">
+                  <p class="error validationerror" ng-show="loginForm.password.$invalid && loginForm.password.$touched">
                       Password is required
                     </p>
                   <div class="row">
                     <div class="col-6">
-                      <button type="button" class="btn btn-primary px-4">Login</button>
+                      <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-primary px-4">Login</button>
                     </div>
                     <div class="col-6 text-right">
                       <button type="button" class="btn btn-link px-0">Forgot password?</button>

@@ -12729,3 +12729,10 @@ input.ng-invalid.ng-touched {
 
 input.ng-valid.ng-touched {
   border: 1px solid #509D12; }
+
+.validationerror {
+  padding: 12px;
+  text-align: center;
+  background-color: rgba(255, 132, 0, 0.027);
+  font-weight: bold;
+  color: #DA3637; }
