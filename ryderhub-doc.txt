@@ -6,4 +6,45 @@ Cmd to start client server:
 sudo npm run serve
 
 
+work iv completed:
+--------------------
+set up backend mysql database
+wrote backend script to process pdf invoices and fill database
+wrote script to gointo gmail and download all invoices
+frontend - using template angular application
+using node js as server
+fixing input validation code errors
+added exressjs to package.json as a dependency (learning to implement it) -edit failed to implement it
+authenticate users (write service)
+using php to communicate backend server to nodejs server and AngularJS
+added mysql connectionthrough php
+front end to connect to backend DB
+mysql user: root password: Number2233..DB
+improved frontend view changes styling
 
+work todo today:
+----------------------
+
+sign users up code register section
+display information from DB view stats
+(temporaly disabled dashboardcntrl authenticatation for development)
+(need to be commiting changes to git repo after end of day)
+----------------------
+
+
+work todo general/long term:
+----------------------
+//possibly use expressjs in application
+making frontend web application 
+connect to gmail 
+upload pdfs create frontend page
+
+download their invoices
+processes invoices
+
+get code all runnning and connected together
+get on a real server exposed to the internet
+possibly use docker to create image of it and run on aws 
+get 5 to 10 users to test it
+take to deliveroo and try to sell idea to them or ask for a job
+ 

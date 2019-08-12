@@ -1,7 +1,12 @@
-angular.module('app').controller('LoginController', ['$scope', 
-    	function($scope){
+angular.module('app').controller('LoginController', ['$scope','Authentication', '$location', 
+    	function($scope, Authentication, $location){
             //$scope.message = "welcome to my app";
             $scope.login = function() {
-                $scope.message = "welcome to my app " + $scope.user.email;
-            }
+                Authentication.login($scope.user);
+            };
+
+            $scope.logout = function() {
+                console.log("pussing button in logincontroller");
+                Authentication.logout($scope.user);
+            };
 }]);

@@ -1,10 +1,10 @@
-angular.module('app').controller('RegisterController', ['$scope', 
-    function($scope){
+angular.module('app').controller('RegisterController', ['$scope', 'Authentication',
+    function($scope, Authentication){
         
         $scope.passwordsMatch = function(pass, repass){
         if (pass !== repass ){
-            console.log(pass);
-            console.log(repass);
+            // console.log(pass);
+            // console.log(repass);
             document.getElementById("repeatpassword1").style.border = "1px solid red";
             return true;
         }else {
@@ -13,6 +13,7 @@ angular.module('app').controller('RegisterController', ['$scope',
         }
     };
     $scope.register = function() {
-        $scope.message = "welcome to my app " + $scope.user.email;
+        //$scope.message = "welcome to my app " + $scope.registerUser.email;
+        Authentication.register($scope.registerUser);
     };
 }]);

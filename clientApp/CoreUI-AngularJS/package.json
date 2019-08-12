@@ -6,7 +6,8 @@
   "homepage": "http://coreui.io/angularjs/",
   "github": "https://github.com/mrholek/CoreUI-AngularJS#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",

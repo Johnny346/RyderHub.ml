@@ -1,6 +1,7 @@
 angular
 .module('app')
-.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$breadcrumbProvider', function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$breadcrumbProvider', 
+function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbProvider) {
 
   $urlRouterProvider.otherwise('/dashboard');
 
@@ -65,6 +66,9 @@ angular
     //page subtitle goes here
     params: { subtitle: 'Welcome to ROOT powerfull Bootstrap & AngularJS UI Kit' },
     resolve: {
+      currentAuth: function(Authentication){
+        //return Authentication.requireAuth();
+      },
       loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
         // you can lazy load files for an existing module
         return $ocLazyLoad.load([
@@ -86,7 +90,8 @@ angular
             'js/controllers/DashboardController.js'
           ]
         });
-      }]
+      }],
+      
     }
   })
   .state('appSimple', {
@@ -112,7 +117,7 @@ angular
   .state('appSimple.login', {
     url: '/login',
     templateUrl: 'views/pages/login.html',
-    controller: 'LoginController'
+    controller: 'LoginController',
   })
   .state('appSimple.register', {
     url: '/register',
@@ -127,4 +132,16 @@ angular
     url: '/500',
     templateUrl: 'views/pages/500.html'
   })
+}]);
+
+
+
+angular
+.module('app').run(['$rootScope', '$location', function($rootScope, $location){
+    $rootScope.$on('stateChangeStart', function(event, next, previous, error){
+      if(!Authentication.requireAuth()){
+        $rootScope.message = 'Sorry you must log in';
+        $location.path('/login');
+      }
+    });
 }]);
