@@ -120,4 +120,20 @@ angular
       }]
     }
   })
+  .state('app.uploadInvoice', {
+    url: '/uploadInvoice',
+    templateUrl: 'views/uploadInvoice.html',
+    controller: 'UploadInvoicesController',
+    ncyBreadcrumb: {
+      label: 'Upload Invoices'
+    },
+    // resolve: {
+    //   loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+    //     // you can lazy load files for an existing module
+    //     return $ocLazyLoad.load({
+    //       files: ['js/controllers/UploadInvoicesController.js']
+    //     });
+    //   }]
+    // }
+  })
 }]);

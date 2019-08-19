@@ -1,0 +1,73 @@
+<!-- <div class="row">
+    <div class="col-md-6">
+<div class="card-body">
+    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal ">
+      
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="file-input">File input</label>
+        <div class="col-md-9">
+          <input type="file" id="file-input" name="file-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
+        <div class="col-md-9">
+          <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+        </div>
+      </div>
+    </form>
+ 
+  <div class="card-footer">
+    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+  </div>
+</div>
+</div> -->
+
+<div class="card">
+    <div class="card-header">
+      <strong>Invoice uploader</strong>
+    
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12">
+            <form name="form" 
+             method="post" 
+             ng-submit="UploadFiles()"
+             enctype="multipart/form-data" class="form-horizontal ">
+             <p ng-show="message">{{ message }} </p>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" id="file-input" for="file-input" >File input</label>
+                  <div class="col-md-9">
+                    <input type="file" ng-model="form.file" name="file" id="file" onchange="angular.element(this).scope().fileName(this)">
+                    <!-- <input type="file" ng-model="form.file" name="file" id="file"> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <!-- <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
+                  <div class="col-md-9">
+                    <input type="file" id="file-multiple-input" ng-model="user.files2" name="file-multiple-input" multiple>
+                  </div> -->
+                </div>
+                <button type="submit" id="upload">upload files</button>
+              </form>
+        </div>
+      </div>
+      <!--/.row-->
+      <div class="row">
+        
+      </div>
+      <!--/.row-->
+      <div class="row">
+        
+        <div class="col-sm-4">
+            <br/>
+          <h3 ng-show="message">{{ message }}</h3>
+        </div>
+      </div>
+      <!--/.row-->
+    </div>
+    
+      
+  </div>

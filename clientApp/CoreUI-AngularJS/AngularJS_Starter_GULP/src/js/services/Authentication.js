@@ -1,4 +1,3 @@
-
 angular.module('app').factory('Authentication',
 ['$rootScope','$location', '$http', 'SetUser',
     function($rootScope, $location, $http, SetUser){
@@ -8,7 +7,7 @@ angular.module('app').factory('Authentication',
             //$rootScope.message = "welcome to my app " + user.email;
             
             $http({
-                url: 'http://192.168.1.39/phpfiles/server.php',
+                url: 'http://192.168.0.122/phpfiles/server.php',
                 method: 'Post',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -55,7 +54,7 @@ angular.module('app').factory('Authentication',
         },
         register: function(registerUser) {
             $http({
-                url: 'http://192.168.1.39/phpfiles/serverRegisterUser.php',
+                url: 'http://192.168.0.122/phpfiles/serverRegisterUser.php',
                 method: 'Post',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
