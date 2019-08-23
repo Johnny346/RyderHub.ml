@@ -21,26 +21,68 @@ added mysql connectionthrough php
 front end to connect to backend DB
 mysql user: root password: Number2233..DB
 improved frontend view changes styling
+sign users up code register section
+create cntrl + service for file upload
+backend created dir for cache uploads
+backend set upload dir to /var/www/html/ryderdatastack/cache/
+got manual uploads working after few days, using jquary ajax method for file upload
+upload pdfs create frontend page
 
 work todo today:
 ----------------------
+1, create database for files(invoices maybe just file names +save all files in folder)
+do error checking on file upload ie only pdfs + only upload if file doesnt exist in DB
+only allow invoice upload if ryder id is set need id for changing invoice file names
 
-sign users up code register section
-display information from DB view stats
+2, connect to gmail add part in frontend website
+run auto gmail jar file, what inputs does it need document
+(would need database table to store gmail password and recent upload info...)
+two types 
+2.1. full history search between (X-Y) dates
+2.2. weekly email scan and upload feature if set up by the user 
+
+3, test cache dir jar watcher see if its working correctly
+4, test processes invoices fix known 8/9 bug document
+
+5, display information from DB view stats
+
+
+(3hour code bursts take break evy 20 mins)
 (temporaly disabled dashboardcntrl authenticatation for development)
+
 (need to be commiting changes to git repo after end of day)
 ----------------------
+
+list of application features
+data analytics
+    - monitor wages
+    - track hours worked
+    - know average income
+    - hourly rate
+    - total income
+    - taxable income
+    - total orders completed
+    - average orders a day
+    - busy times to work based on order numbers completed
+weather information
+    - weather alerts
+    - windy website data
+equipment manager
+    - upload information on your bicycle 
+    - get alerts for when to service or repair
+schedular manager
+    - syn with googgle calander for when your working
+    - set reminders when to take break or book shifts based on forcasted busy periods
+social 
+    - connect with order ryders 
+    - talk and share info with ryders
 
 
 work todo general/long term:
 ----------------------
 //possibly use expressjs in application
 making frontend web application 
-connect to gmail 
-upload pdfs create frontend page
 
-download their invoices
-processes invoices
 
 get code all runnning and connected together
 get on a real server exposed to the internet

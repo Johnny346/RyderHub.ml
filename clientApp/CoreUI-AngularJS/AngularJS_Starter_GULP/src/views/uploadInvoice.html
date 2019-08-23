@@ -32,25 +32,47 @@
     <div class="card-body">
       <div class="row">
         <div class="col-sm-12">
-            <form name="form" 
+            <form name="uploadForm" 
              method="post" 
              ng-submit="UploadFiles()"
              enctype="multipart/form-data" class="form-horizontal ">
-             <p ng-show="message">{{ message }} </p>
+             
                 <div class="form-group row">
-                  <label class="col-md-3 col-form-label" id="file-input" for="file-input" >File input</label>
-                  <div class="col-md-9">
-                    <input type="file" ng-model="form.file" name="file" id="file" onchange="angular.element(this).scope().fileName(this)">
+                    <div class="col-md-6" style="border-right: 2px solid rgb(53, 53, 143);">
+                        <p ng-show="message">{{ message }} </p>
+                        <h3>Instructions for uploading invoices</h3>
+                        <p>Before you upload your invoices: 
+                            <br/>1. Create a new folder on your device
+                            <br/> 2. Download all the invoice files from your email and place in the folder
+                            <br/> 3. Enter your RyderID
+                            <br/> 4. Choose all the files to download 
+                            <br/> 5. Make sure not to upload the same invoice twice!
+                            <br/> 6. If upload is successful, go to <a ng-href="#Dashboard">dashboard</a> page</p>
+                           
+                          
+                    </div>
+                  <div class="col-md-6">
+                      <br/>
+                    <span>RyderID:  </span>
+                    <input type="text"  id="ryderID" ng-reguired="true" placeholder=" Enter RyderID" ng-model="user.id" required pattern=".{3,}">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <!-- <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" id="file" multiple onchange="angular.element(this).scope().fileName(this)"> -->
                     <!-- <input type="file" ng-model="form.file" name="file" id="file"> -->
-                  </div>
+                    <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" id="file" multiple>
+                    <br/>
+                    <br/>
+                    <button type="submit" ng-disabled="uploadForm.$invalid" id="upload">Upload Files</button>
+                    <br/>
+                    <br/>
+                    <p id="uploadMessage"></p>
                 </div>
-                <div class="form-group row">
-                  <!-- <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
-                  <div class="col-md-9">
-                    <input type="file" id="file-multiple-input" ng-model="user.files2" name="file-multiple-input" multiple>
-                  </div> -->
                 </div>
-                <button type="submit" id="upload">upload files</button>
+                <br/>
+                <br/>
+                <h5 style="border-top: 2px solid rgb(37, 106, 163);">An easier way is to try our Invoice downloader, 
+                <br/>it connects with your Gmail account :) <a ng-href="#">Instructions here</a></h5>
               </form>
         </div>
       </div>

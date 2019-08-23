@@ -1,7 +1,7 @@
 <?php
 #connect on localhost for user 'root'
 $dbc = mysqli_connect
-        ('localhost' , 'root' , 'Number2233' , 'ryderdatabase' )
+        ('localhost' , 'root' , 'Number2233..db' , 'ryderdatabase' )
         OR die
         ( mysqli_connect_error());
 

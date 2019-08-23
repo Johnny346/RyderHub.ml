@@ -1,0 +1,38 @@
+angular.module('app').factory('UploadInvoiceService',
+['$rootScope','$location', '$http',
+    function($rootScope, $location, $http){
+        $rootScope.form = [];
+        $rootScope.files = [];
+
+    return {
+        UploadFiles: function(form){
+            //$rootScope.message = "welcome to my app " + user.email;
+            var dat = document.getElementById('invoice').files[0];
+             var formData = new FormData();
+             formData.append("invoice", dat);
+            console.log("printing here " + formData);
+            $http({
+                url: 'http://192.168.0.122/phpfiles/upload.php',
+                method: 'Post',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+			  //data : 'hi='+dat.name
+               processData: false,  
+			  data : formData
+            }).then(function(response){
+                if(response.data.status == 'file_exits'){ 
+                    console.log("worked");
+                   
+                }else {
+                    console.log(response.data.status);
+                    $rootScope.message = response.data.status;
+                    
+                }
+               
+            }).catch(function(error){
+                $rootScope.message = error.message;
+            }); 
+        }
+    }
+}]);

@@ -16,7 +16,10 @@ angular.module("app")
   };
   service.userLoggedOut = function() {
     loggedin = false;
-};
+  };
+  service.getEmail = function() {
+    return email;
+  }
 
   return service;
 });
