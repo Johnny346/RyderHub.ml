@@ -12,7 +12,7 @@ angular.module('app').controller('UploadInvoicesController', ['$scope', '$http',
                   let ryderID =  $scope.user.id;
                   console.log("file name "+ file_data);
                   console.log("ryderid is : "+ ryderID); 
-                  var fileName = new File(["foo"], ryderID, {type: "text/plain",});  
+                  var fileName = new File(["foo"], ryderID, {type: "application/pdf",});  
                   form_data.append('file[]', fileName);
 
                  for(var i=0; i <file_data; i++){

@@ -127,13 +127,13 @@ angular
     ncyBreadcrumb: {
       label: 'Upload Invoices'
     },
-    // resolve: {
-    //   loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-    //     // you can lazy load files for an existing module
-    //     return $ocLazyLoad.load({
-    //       files: ['js/controllers/UploadInvoicesController.js']
-    //     });
-    //   }]
-    // }
+  })
+  .state('app.AutoUploader', {
+    url: '/AutoUploader',
+    templateUrl: 'views/AutoGmailUploader.html',
+    controller: 'AutoUploaderController',
+    ncyBreadcrumb: {
+      label: 'Auto Upload Invoices'
+    },
   })
 }]);

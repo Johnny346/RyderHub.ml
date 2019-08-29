@@ -29,3 +29,4 @@ angular
   $rootScope.$state = $state;
   return $rootScope.$stateParams = $stateParams;
 }]);
+

@@ -1,0 +1,131 @@
+<div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                Auto Invoice Upload form<br/>
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4>Instructions here</h4>
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <p>Here you can add your email details and select your preferences for using this tool.</p>
+                <p>This tool automatically searches in your emails and downloads all the relevent invoices</p>
+                <strong>Note:</strong> This tool only works with Gmail</p>
+                <strong>Instructions</strong>
+                <br/>
+                <p>1. Go to your <a ng-href="https://myaccount.google.com/security">Google account</a></p>
+                <p>2. On that page, go to "Less secure app access" and turn this feature on.</p>
+                <p>3. Now in the form below enter your Email address and email account password</p>
+                <p>4. Agree to the terms and conditions</p>
+                <p>5. If doing a full search for invoices in the gmail, then select the start date and finish date to search</p>
+                <p>6. If you want to use the weekly search and upload feature select it in preferences</p>
+                <p>7. Click submit, and the invoices will be downloaded and processed automatically.</p>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <strong>Preferences and Upload</strong>
+        </div>
+        <div class="card-body">
+          <form  method="post" class="form-inline" name='autoUploadForm' 
+          ng-submit="runUploader()" novalidate autocomplete="off">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mr-1">
+                                <span style="margin-right: 5px;">RyderID:  </span>
+                                <br/>
+                                <input type="text"  id="ryderID" ng-reguired="true" placeholder="Enter RyderID" ng-model="autoUpload.id" required pattern=".{3,}">
+                            <br/>
+                            <br/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="col-md-6">
+                               
+                            <div class="form-group mr-1">
+                                <label class="col-form-label mr-1" >Email</label>
+                                <input type="email" ng-model="autoUpload.email"  ng-reguired="true" required pattern=".{5,}" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mr-1">
+                                <label class="col-form-labe mr-1" >Email Account Password</label>
+                                <input type="password"  autocomplete="off" ng-model="autoUpload.password" ng-reguired="true" required pattern=".{4,}" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Select weekly search and upload feature</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="switch switch-text switch-pill switch-primary">
+                            <input type="checkbox" class="switch-input" ng-model="autoUpload.weeklyUpload">
+                            <span class="switch-label" data-on="On" data-off="Off"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                            &nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Agree to the <a ng-href="#">Terms and Conditions</a> of using this tool</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="switch switch-icon switch-pill switch-primary">
+                                <input type="checkbox" name="tcRead" ng-model="autoUpload.readTermsConditions" 
+                                ng-true-value="2" check-required class="switch-input" >
+                                <span class="switch-label" data-on="&#xf00c" data-off="&#xf00d"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                            &nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <button ng-click="" ng-disabled="autoUploadForm.$invalid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save Preferences</button>
+               
+                <hr class="hrStyle"/>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Full history search and upload</h5>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mr-1">
+                                <label class="col-form-label mr-1" >Start date to search</label>
+                                <input type="date" ng-reguired="true" ng-model="autoUpload.startDate" name="startDate" class="form-control" placeholder="Enter start date..">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mr-1">
+                                <label class="col-form-label mr-1" >End date of search</label>
+                                <input type="date"  ng-reguired="true" ng-model="autoUpload.endDate" name="endDate" class="form-control" placeholder="Enter End date..">
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <button type="submit" ng-disabled="autoUploadForm.$invalid && autoUpload.startDate.$valid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Search & upload</button>
+        
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+         </div>
+      </div>
+    
+    
+      
+      
+
+      

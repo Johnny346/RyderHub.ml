@@ -38,7 +38,7 @@
              enctype="multipart/form-data" class="form-horizontal ">
              
                 <div class="form-group row">
-                    <div class="col-md-6" style="border-right: 2px solid rgb(53, 53, 143);">
+                    <div class="col-md-6" style="border-right: 1px solid rgb(53, 53, 143);">
                         <p ng-show="message">{{ message }} </p>
                         <h3>Instructions for uploading invoices</h3>
                         <p>Before you upload your invoices: 
@@ -60,7 +60,8 @@
                     <br/>
                     <!-- <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" id="file" multiple onchange="angular.element(this).scope().fileName(this)"> -->
                     <!-- <input type="file" ng-model="form.file" name="file" id="file"> -->
-                    <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" id="file" multiple>
+                    <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" 
+                    id="file" multiple accept="application/pdf">
                     <br/>
                     <br/>
                     <button type="submit" ng-disabled="uploadForm.$invalid" id="upload">Upload Files</button>
@@ -71,8 +72,8 @@
                 </div>
                 <br/>
                 <br/>
-                <h5 style="border-top: 2px solid rgb(37, 106, 163);">An easier way is to try our Invoice downloader, 
-                <br/>it connects with your Gmail account :) <a ng-href="#">Instructions here</a></h5>
+                <h5 style="border-top: 1px solid rgb(37, 106, 163);">An easier way is to try our Invoice downloader, 
+                <br/>it connects with your Gmail account :) <a ui-sref="app.AutoUploader">Instructions here</a></h5>
               </form>
         </div>
       </div>

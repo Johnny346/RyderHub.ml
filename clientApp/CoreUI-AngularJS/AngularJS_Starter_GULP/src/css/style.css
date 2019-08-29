@@ -13863,3 +13863,6 @@ input.ng-valid.ng-touched {
 
 .breadcrumb-menu .btn a {
   color: #fff; }
+
+.hrStyle {
+  border-top: 2px solid #2b2166; }
