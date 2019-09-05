@@ -4,12 +4,12 @@
 
 
 # Features include: 
- * payment monitoring application
+ * Payment monitoring application
  * Share and connect with other deliveroo ryders
- * upload invoice payments to analyis earnings
- * sync wih google schedule your work days
+ * Upload invoice payments to analysis earnings
+ * Sync wih google schedule your work days
  * Equipment manager - track repairs and get service notifications
- * weather alerts
+ * Weather alerts
  
 ![dashboard page](full-dashboard-webview.PNG)
 ## Login Page
