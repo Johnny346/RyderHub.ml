@@ -11,15 +11,15 @@
  * Equipment manager - track repairs and get service notifications
  * Weather alerts
  
-![dashboard page](full-dashboard-webview.PNG)
+![dashboard page](clientApp/full-dashboard-webview.PNG)
 ## Login Page
-![login page](login-webview.PNG)
+![login page](clientApp/login-webview.PNG)
 
 ## Register page for new users
-![register page](register-webview.PNG)
+![register page](clientApp/register-webview.PNG)
 ## Upload payment invoices
-![upload page](upload-webview.PNG)
+![upload page](clientApp/upload-webview.PNG)
 ## Auto upload, Connect with Gmail
-![auto upload page](auto-upload-webview.PNG)
+![auto upload page](clientApp/auto-upload-webview.PNG)
 
-![dashboard page](dashboard-webview.PNG)
+![dashboard page](clientApp/dashboard-webview.PNG)
