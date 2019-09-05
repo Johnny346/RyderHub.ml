@@ -1,9 +1,9 @@
 # RyderHub.ml
 
-# RyderHub is a platform for deliveroo ryders.
+# RyderHub is an app for deliveroo ryders.
 
 
-* Features include: 
+# Features include: 
  * payment monitoring application
  * Share and connect with other deliveroo ryders
  * upload invoice payments to analyis earnings
