@@ -9,7 +9,7 @@
       <!-- <li class="nav-title">
         UI Elements
       </li> -->
-      <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
+      <!-- <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
         <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-puzzle"></i> Components</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
@@ -45,15 +45,24 @@
             <a class="nav-link" ui-sref-active="active" ui-sref="app.icons.simplelineicons"><i class="icon-star"></i> Simple Line Icons</a>
           </li>
         </ul>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.uploadInvoice"><i class="icon-layers"></i> Upload Invoices</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ui-sref-active="active" ui-sref="app.uploadInvoice"><i class="icon-layers"></i> Upload Invoices<span class="badge badge-info">NEW</span></a>
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.AutoUploader"><i class="icon-arrow-down-circle"></i> Auto-Upload Invoices<span class="badge badge-info">NEW</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ui-sref-active="active" ui-sref="app.AutoUploader"><i class="icon-arrow-down-circle"></i> Auto Invoice Uploader<span class="badge badge-info">NEW</span></a>
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="fa fa-thermometer-2 fa-lg"></i> Weather Info</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="icon-calculator"></i> Widgets </a>
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="fa fa-bicycle fa-lg"></i> Equipment Manager </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="fa fa-calendar fa-lg"></i> Schedular</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.widgets"><i class="fa fa-users fa-lg"></i> Connect & Share </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" ui-sref-active="active" ui-sref="app.charts"><i class="icon-pie-chart"></i> Charts</a>
@@ -63,7 +72,7 @@
         Extras
       </li>
       <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.pages')}">
-        <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.pages')}" href="#"><i class="icon-star"></i> Pages</a>
+        <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.pages')}" href="#"><i class="icon-star"></i>Links</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
             <a class="nav-link" ui-sref-active="active" ui-sref="appSimple.login"><i class="icon-star"></i> Login</a>

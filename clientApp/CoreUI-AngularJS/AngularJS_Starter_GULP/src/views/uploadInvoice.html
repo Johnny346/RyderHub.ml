@@ -39,7 +39,7 @@
              
                 <div class="form-group row">
                     <div class="col-md-6" style="border-right: 1px solid rgb(53, 53, 143);">
-                        <p ng-show="message">{{ message }} </p>
+                        <p ng-show="message">{{ currentUser }} </p>
                         <h3>Instructions for uploading invoices</h3>
                         <p>Before you upload your invoices: 
                             <br/>1. Create a new folder on your device
@@ -61,7 +61,7 @@
                     <!-- <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" id="file" multiple onchange="angular.element(this).scope().fileName(this)"> -->
                     <!-- <input type="file" ng-model="form.file" name="file" id="file"> -->
                     <input ng-disabled="uploadForm.$invalid" type="file" ng-model="form.file" name="file" 
-                    id="file" multiple accept="application/pdf">
+                    id="file" ng-reguired="true" multiple accept="application/pdf">
                     <br/>
                     <br/>
                     <button type="submit" ng-disabled="uploadForm.$invalid" id="upload">Upload Files</button>

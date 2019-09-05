@@ -56,7 +56,7 @@
                         <div class="col-md-6">
                             <div class="form-group mr-1">
                                 <label class="col-form-labe mr-1" >Email Account Password</label>
-                                <input type="password"  autocomplete="off" ng-model="autoUpload.password" ng-reguired="true" required pattern=".{4,}" class="form-control" placeholder="">
+                                <input type="password"  autocomplete="new-password" ng-model="autoUpload.password" ng-reguired="true" required pattern=".{4,}" class="form-control" placeholder="">
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                             &nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
-                <button ng-click="" ng-disabled="autoUploadForm.$invalid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save Preferences</button>
+                <button ng-click=""  class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save Preferences</button>
                
                 <hr class="hrStyle"/>
                 
@@ -104,18 +104,18 @@
                     <div class="col-md-6">
                         <div class="form-group mr-1">
                                 <label class="col-form-label mr-1" >Start date to search</label>
-                                <input type="date" ng-reguired="true" ng-model="autoUpload.startDate" name="startDate" class="form-control" placeholder="Enter start date..">
+                                <input type="date" ng-reguired="true" ng-model="autoUpload.startDate" name="startDate" class="form-control" placeholder="Enter start date.." required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group mr-1">
                                 <label class="col-form-label mr-1" >End date of search</label>
-                                <input type="date"  ng-reguired="true" ng-model="autoUpload.endDate" name="endDate" class="form-control" placeholder="Enter End date..">
+                                <input type="date"  ng-reguired="true" ng-model="autoUpload.endDate" name="endDate" class="form-control" placeholder="Enter End date.." required>
                         </div>
                     </div>
                 </div>
                 <br/>
-                <button type="submit" ng-disabled="autoUploadForm.$invalid && autoUpload.startDate.$valid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Search & upload</button>
+                <button type="submit" ng-disabled="autoUploadForm.$invalid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Search & upload</button>
         
             </div>
           </form>

@@ -165,7 +165,7 @@ function random(min,max) {
 cardChartCtrl4.$inject = ['$scope'];
 function cardChartCtrl4($scope) {
 
-  var elements = 16;
+  var elements = 10;
   var labels = [];
   var data = [];
   //
@@ -215,7 +215,7 @@ function trafficDemoCtrl($scope){
   }
 
   $scope.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Thursday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  $scope.series = ['Current', 'Previous', 'BEP'];
+  $scope.series = ['Orders', 'Hours', 'Avg Pay'];
   $scope.data = [ data1, data2, data3];
   $scope.colors = [{
     backgroundColor: convertHex(brandInfo,10),

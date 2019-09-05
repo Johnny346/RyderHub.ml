@@ -2,7 +2,11 @@ angular.module('app').controller('AutoUploaderController',
  ['$scope', 'Authentication', '$location','SetUser', '$http',
  function($scope, Authentication, $location, SetUser, $http){
     //$scope.message = "welcome to my app";
-
+    $scope.autoUpload = {
+      id: SetUser.getRyderID($scope.email),
+      password: "",
+      email: localStorage.getItem("userEmail")
+  }
 
     $scope.runUploader = function() {
         var email = $scope.autoUpload.email;

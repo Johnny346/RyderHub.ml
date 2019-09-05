@@ -19,8 +19,13 @@ angular.module('app').factory('Authentication',
                     $rootScope.message = "welcome to my app " + response.data.status;
                     $rootScope.currentUser = user.email;
                     SetUser.userLoggedIn();
+                    localStorage.setItem("userEmail",user.email);
+                    
+                    localStorage.setItem("ryderID",SetUser.getRyderID(user.email));
+                    $rootScope.email = SetUser.setEmail(user.email);
+                    console.log("user email "+SetUser.getEmail());
                     console.log("is user logged in ---" + SetUser.isUserLoggedIn());
-                    // SetUser.setEmail(response.data.email);
+                    
                     console.log(response.data);
                     $location.path('/dashboard');
                 }else {
@@ -46,7 +51,7 @@ angular.module('app').factory('Authentication',
             
         },
         logout: function() {
-            console.log("pussing button in auth service");
+            console.log("pushing button in auth service");
             SetUser.userLoggedOut();
             console.log("logging out user"+ SetUser.isUserLoggedIn() + " currentuser " + $rootScope.currentUser);
             $rootScope.currentUser = ' ';

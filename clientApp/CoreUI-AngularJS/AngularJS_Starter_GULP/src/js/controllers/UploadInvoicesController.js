@@ -1,15 +1,27 @@
 angular.module('app').controller('UploadInvoicesController', ['$scope', '$http', 'UploadInvoiceService', 'SetUser',
  
     	function($scope, $http, UploadInvoiceService, SetUser){
-             $scope.UploadFiles = function() {
-            //     console.log("pussing button in logincontroller"); 
+            
+                  
+                  console.log("is user logged in? : "+ SetUser.isUserLoggedIn());
+                  let ryderID = SetUser.getRyderID($scope.email);
+                  $scope.user = {
+                      id: ryderID
+                  }
+                  console.log("user log out");
+                  console.log("is user logged in? : "+ SetUser.isUserLoggedIn());
+                  console.log("user email ");
+                  $scope.currentUser = SetUser.getRyderID($scope.email);
 
+
+             $scope.UploadFiles = function() {
             //    //$scope.message = "Upload was successful";
                  var uploadMessageID = document.getElementById("uploadMessage");
                   //UploadInvoiceService.UploadFiles($scope.form);
                   var form_data = new FormData(); 
                   var file_data = $('#file').prop('files').length; 
-                  let ryderID =  $scope.user.id;
+                  let ryderID =  SetUser.getEmail();
+                  $scope.currentUser = ryderID
                   console.log("file name "+ file_data);
                   console.log("ryderid is : "+ ryderID); 
                   var fileName = new File(["foo"], ryderID, {type: "application/pdf",});  
