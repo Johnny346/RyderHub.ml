@@ -17,7 +17,7 @@ fixing input validation code errors
 added exressjs to package.json as a dependency (learning to implement it) -edit failed to implement it
 authenticate users (write service)
 using php to communicate backend server to nodejs server and AngularJS
-added mysql connectionthrough php
+added mysql connection through php
 front end to connect to backend DB
 mysql user: root password: Number2233..DB
 improved frontend view changes styling
@@ -27,25 +27,40 @@ backend created dir for cache uploads
 backend set upload dir to /var/www/html/ryderdatastack/cache/
 got manual uploads working after few days, using jquary ajax method for file upload
 upload pdfs create frontend page
+completed - 1, create database for files(invoices maybe just file names +save all files in folder)
+                do error checking on file upload ie only pdfs + only upload if file doesnt exist in DB
+                only allow invoice upload if ryder id is set need id for changing invoice file names
+created gmail auto invoice ulploader interface
+* required more validation i.e date validation for sending date to jar file
+* (would need database table to store gmail password and recent upload info...)
+* weekly email scan and upload feature if set up by the user 
+for running email uploader, created nodejs server running from app.js at port 8081 
+autoupload form sends data to port 8081, nodejs then runs jar file with that data
+email jar file inputs are useremail, password, enddate(yyyy-mm-dd), startdate(yyyy-mm-dd),ryderid
+3, test cache dir jar watcher see if its working correctly
+    - need to add to jar (emailuploader) to check if file exists in cache else send to temp
+*need to use cookies and localstorage to persist user data through page refreshes
+wrote php script and angularjs http method to get ryder id based on email input
+* bug file upload runs with no file selected fix later
+cleaned up dashboard view a little
 
 work todo today:
 ----------------------
-1, create database for files(invoices maybe just file names +save all files in folder)
-do error checking on file upload ie only pdfs + only upload if file doesnt exist in DB
-only allow invoice upload if ryder id is set need id for changing invoice file names
 
-2, connect to gmail add part in frontend website
-run auto gmail jar file, what inputs does it need document
-(would need database table to store gmail password and recent upload info...)
-two types 
-2.1. full history search between (X-Y) dates
-2.2. weekly email scan and upload feature if set up by the user 
+4, display information from DB view stats
+5, test processes invoices fix known 8/9 bug document
+6, create webpage to showcase ryderhub platform and capabilities
+7, get code all runnning and connected together
+8, get on a real server exposed to the internet
+9, get 5 to 10 users to test it
+9.1, output to log files what is being uploaded ie user stats
+10, show to deliveroo and try to sell idea to them or ask for a job
 
-3, test cache dir jar watcher see if its working correctly
-4, test processes invoices fix known 8/9 bug document
-
-5, display information from DB view stats
-
+11, clean all code up add comments add to github and portfolio
+12, create diagram of archetecture of the platform
+13, improve logo
+14, integrate with google the features
+15, add all other large features functionality
 
 (3hour code bursts take break evy 20 mins)
 (temporaly disabled dashboardcntrl authenticatation for development)
@@ -71,10 +86,10 @@ equipment manager
     - upload information on your bicycle 
     - get alerts for when to service or repair
 schedular manager
-    - syn with googgle calander for when your working
+    - sync with googgle calander for when your working
     - set reminders when to take break or book shifts based on forcasted busy periods
 social 
-    - connect with order ryders 
+    - connect with other ryders 
     - talk and share info with ryders
 
 

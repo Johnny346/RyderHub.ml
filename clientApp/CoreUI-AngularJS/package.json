@@ -33,6 +33,7 @@
     "url": "https://github.com/mrholek/CoreUI-AngularJS/issues"
   },
   "dependencies": {
+    "angularjs-datepicker": "^2.1.23",
     "express": "^4.17.1"
   }
 }

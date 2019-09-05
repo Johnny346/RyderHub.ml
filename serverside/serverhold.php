@@ -30,5 +30,5 @@ if(mysqli_num_rows($result) > 0 && mysqli_num_rows($result2) > 0) {
         $response['status'] = 'error';
 }
 
-
+mysqli_close($dbc);
 echo json_encode($response);
