@@ -39,8 +39,7 @@
     </div>
   </div>
   <div class="container"  ng-show="currentUser" ng-contoller="LoginController">
-    <h1>Hello {{currentUser}}</h1>
-    <button ng-click="logout()">log out</button>
+    <h3>Logged in: {{currentUser}}</h3>
   </div>
   <div class="row">
     <div class="col-sm-6 col-lg-3">
@@ -57,7 +56,7 @@
             </div>
           </div>
           <h4>Total Income: </h4>
-          <h4 class="mb-0">2449.823</h4>
+          <h4 class="mb-0">{{totalIncome | currency : "€"}}</h4>
         </div>
         <div class="chart-wrapper px-3" style="height:70px;">
           <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
@@ -73,7 +72,7 @@
             <i class="icon-location-pin"></i>
           </button>
            <h4>Hours Worked</h4>
-           <h4 class="mb-0">932</h4>
+           <h4 class="mb-0">{{totalHours}}</h4>
         </div>
         <div class="chart-wrapper px-3" style="height:70px;">
           <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
@@ -96,7 +95,7 @@
             </div>
           </div>
           <h4 class="mb-0">Weekly Income</h4>
-          <p>230.00</p>
+          <h4 class="mb-0">{{avgWeeklyPay | currency : "€"}}</h4>
         </div>
         <div class="chart-wrapper" style="height:70px;">
           <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
@@ -119,7 +118,7 @@
             </div>
           </div>
           <h4 class="mb-0">Avg Daily Orders</h4>
-          <p>12</p>
+          <h4 class="mb-0">{{avgDailyOrders}}</h4>
         </div>
         <div class="chart-wrapper px-3" style="height:70px;">
           <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors" height="70"></canvas>
@@ -130,7 +129,7 @@
   </div>
   <!--/.row-->
 
-  <div class="card" ng-controller="trafficDemoCtrl">
+  <div class="card">
     <div class="card-body">
       <div class="row">
         <div class="col-sm-5">

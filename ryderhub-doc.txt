@@ -43,14 +43,17 @@ email jar file inputs are useremail, password, enddate(yyyy-mm-dd), startdate(yy
 wrote php script and angularjs http method to get ryder id based on email input
 * bug file upload runs with no file selected fix later
 cleaned up dashboard view a little
+* before going live i must encript password and change scripts + verify
+4, display information from DB view stats
+7, get code all runnning and connected together
 
 work todo today:
 ----------------------
 
-4, display information from DB view stats
+
 5, test processes invoices fix known 8/9 bug document
 6, create webpage to showcase ryderhub platform and capabilities
-7, get code all runnning and connected together
+
 8, get on a real server exposed to the internet
 9, get 5 to 10 users to test it
 9.1, output to log files what is being uploaded ie user stats

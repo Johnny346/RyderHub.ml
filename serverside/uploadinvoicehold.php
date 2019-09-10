@@ -32,7 +32,7 @@ if(!empty($_FILES)){
        
 
 }else{
-        $response['status'] = 'definitly fucked';
+        $response['status'] = 'error';
 }
  echo json_encode($response);
 ?>

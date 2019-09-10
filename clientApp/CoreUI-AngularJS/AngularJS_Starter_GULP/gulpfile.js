@@ -22,6 +22,7 @@ require('require-dir')('./gulp-tasks');
 gulp.task('serve', ['sass'], function() {
 
   browserSync.init({
+    ghostMode: false,
     server: ['./', './src']
   });
 

@@ -4,7 +4,7 @@ angular.module('app').controller('UploadInvoicesController', ['$scope', '$http',
             
                   
                   console.log("is user logged in? : "+ SetUser.isUserLoggedIn());
-                  let ryderID = SetUser.getRyderID($scope.email);
+                  let ryderID =  SetUser.getRyderID($scope.email);
                   $scope.user = {
                       id: ryderID
                   }
@@ -20,7 +20,7 @@ angular.module('app').controller('UploadInvoicesController', ['$scope', '$http',
                   //UploadInvoiceService.UploadFiles($scope.form);
                   var form_data = new FormData(); 
                   var file_data = $('#file').prop('files').length; 
-                  let ryderID =  SetUser.getEmail();
+                  let ryderID = SetUser.getRyderID($scope.email);
                   $scope.currentUser = ryderID
                   console.log("file name "+ file_data);
                   console.log("ryderid is : "+ ryderID); 

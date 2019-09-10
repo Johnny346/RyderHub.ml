@@ -38,7 +38,7 @@ app.post('/Upload', function(req, res, next){
                 console.log(json.endDate);
                 console.log(json.startDate);
             var exec = require('child_process').exec, child;
-                child = exec('java -jar ~/Desktop/GetInvoicesFromGmailServer.jar ' + json.userEmail+ ' '
+                child = exec('java -jar ~/Desktop/GetInvoicesFromGmailServer2.jar ' + json.userEmail+ ' '
                 + json.password + ' ' + json.endDate + ' ' + json.startDate + ' ' + json.ryderID,
                 function (error, stdout, stderr){
                     console.log('stdout: ' + stdout);
