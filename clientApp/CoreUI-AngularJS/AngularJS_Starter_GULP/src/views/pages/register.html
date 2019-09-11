@@ -5,11 +5,12 @@
         <div class="card mx-4">
           
           <div class="card-body p-4">
-              <a class="navbar-brand" ><img src='../img/logo.png' height="120" width="340"></a>
+              <a class="navbar-brand" ><img src='../img/logo.png' id="logo-image"></a>
               <form name='registerForm' 
               ng-submit="register()"
               novalidate>
-                <h1>Register</h1>
+                <h2>Register</h2>
+                <hr/>
                 <p ng-show="message" style="font-size:14px;">{{ message }}</p>
                 <p class="text-muted">Create your account</p>
                 <div class="input-group mb-3">

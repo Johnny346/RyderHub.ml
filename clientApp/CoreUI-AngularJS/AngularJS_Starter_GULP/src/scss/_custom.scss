@@ -38,3 +38,22 @@ input.ng-valid.ng-touched {
 .hrStyle {
     border-top: 2px solid rgb(43, 33, 102);
 }
+
+#logo-image {
+    height:120px;
+    width:320px;
+}
+
+.display-on-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 415px) {
+    #logo-image {
+        height:80px;
+        width:245px;
+    }
+    .display-on-mobile {
+        display: block;
+    }
+  }
