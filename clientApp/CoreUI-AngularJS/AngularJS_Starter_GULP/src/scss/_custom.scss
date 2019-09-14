@@ -48,6 +48,19 @@ input.ng-valid.ng-touched {
     display: none;
 }
 
+// main dashboard 
+.largechart input {
+    width: 35%; 
+}
+
+.largechart input .field1 {
+    float:left;
+}
+
+.largechart input .field2 {
+    float:clear;
+}
+
 @media only screen and (max-width: 415px) {
     #logo-image {
         height:80px;

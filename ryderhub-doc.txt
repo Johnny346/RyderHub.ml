@@ -46,10 +46,13 @@ cleaned up dashboard view a little
 * before going live i must encript password and change scripts + verify
 4, display information from DB view stats
 7, get code all runnning and connected together
+can now select between two dates to view data in dashboard
 
 work todo today:
 ----------------------
-
+two know issues
+1. missing pay information in shiftlog table in database
+2. not all invoices got uploaded from gmail only from 2018-7-0
 
 5, test processes invoices fix known 8/9 bug document
 6, create webpage to showcase ryderhub platform and capabilities

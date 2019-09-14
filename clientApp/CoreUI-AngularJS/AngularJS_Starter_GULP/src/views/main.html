@@ -132,13 +132,22 @@
   <div class="card">
     <div class="card-body">
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-md-6">
           <h4 class="card-title mb-0">Orders Completed</h4>
-          <div class="small text-muted">November 2017 - November 2019</div>
+          <form name='chartForm'>
+            <div  ng-show="userstartDate">First registered date {{ userstartDate}}</div>
+            <div class="largechart" >
+             
+              Start
+              <input type="date" class="field1" ng-reguired="true" ng-model="userchart.startDate" name="startDate" class="form-control" placeholder="Start date.." required>
+              Finish
+              <input type="date" class="field2" ng-reguired="true" ng-model="userchart.finishDate" name="finishDate" class="form-control" placeholder="Finish date.." required>
+            </div>
+          </form>
         </div>
         <!--/.col-->
-        <div class="col-sm-7 d-none d-md-block">
-          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+        <div class="col-md-6 d-none d-md-block">
+          <button type="button" ng-click="updateMainDashboardData(userchart)" ng-disabled="chartForm.$invalid"class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
           <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
             <label class="btn btn-outline-secondary">
               <input type="radio" name="options" id="option1" autocomplete="off"> Day

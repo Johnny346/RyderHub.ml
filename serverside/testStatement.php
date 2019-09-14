@@ -11,17 +11,17 @@ $dbc = mysqli_connect
         OR die
         ( mysqli_connect_error());
 
-        $queryDataDailyEarnings = "SELECT hours FROM shiftlog WHERE workdate BETWEEN '2018-03-03' AND '2019-03-03' and ryder_id = '92306'";
+        $queryDataDailyOrders = "SELECT orders as weeklyOrders FROM shiftlog WHERE workdate BETWEEN '2019-8-1'AND '2019-8-9' and ryder_id = '92306'";
     
-        $resultDDE = mysqli_query($dbc, $queryDataDailyEarnings);
-    
-        if(mysqli_num_rows($resultDDE) > 0) {
-            while ($row = mysqli_fetch_array($resultDDE, MYSQLI_ASSOC)) {
-                $response['DataDailyEarnings'][] =  $row;
-            }
-        } else{
-                $response['status'] = 'error';
-        } 
+        $resultDDO = mysqli_query($dbc, $queryDataDailyOrders);
+        
+            if(mysqli_num_rows($resultDDO) > 0) {
+                while ($row = mysqli_fetch_array($resultDDO, MYSQLI_ASSOC)) {
+                    $response['DataDailyOrders'][] =  $row;
+                }
+            } else{
+                    $response['status'] = 'error';
+            } 
 
 
 mysqli_close($dbc);
