@@ -23,7 +23,7 @@ app.get('*', function(req, res, next) {
 });
 
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 const HOST = '0.0.0.0';
 
 app.listen(port, HOST);
