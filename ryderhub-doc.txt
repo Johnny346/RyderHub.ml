@@ -47,9 +47,34 @@ cleaned up dashboard view a little
 4, display information from DB view stats
 7, get code all runnning and connected together
 can now select between two dates to view data in dashboard
+live server set up:
+created a user john
+password is Number2233..Number2233../
+deactivated root login
+installed nodejs
+added npm 
+added libcap to allow node applications to run on ports below 1200ish
+need to install mysql and php
+set up php to upload files set upload dir
+create cache dir
+add php files
+change ip address to working url domain name
+need to install java 
+need to set up and install database
+mysql create root user i think
 
 work todo today:
 ----------------------
+
+need to install mysql and php
+set up php to upload files set upload dir
+create cache dir
+add php files
+change ip address to working url domain name
+need to install java 
+restart dashboardcntrl authenticatation for production version
+build dist version
+
 two know issues
 1. missing pay information in shiftlog table in database
 2. not all invoices got uploaded from gmail only from 2018-7-0
@@ -111,3 +136,30 @@ possibly use docker to create image of it and run on aws
 get 5 to 10 users to test it
 take to deliveroo and try to sell idea to them or ask for a job
  
+// Documentation
+
+server docs
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+angularjs app docs
+    versioning docs
+
+mysql database docs
+CREATE USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'Number2233..db';
+GRANT ALL PRIVILEGES ON * . * TO 'php'@'localhost';
+REVOKE ALL PRIVILEGES ON * . * FROM 'php'@'localhost';
+
+SHOW GRANTS FOR 'php'@'localhost';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Number2233..db';
+sudo service mysql restart
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Number2233..db';
+changes apache2 listen port from 80 to 443
+change port link in two files
+sudo nano /var/www/myryderhub/info.php
+php code docs
+
+java software applications docs
+
+update user set authentication_string=PASSWORD("Number2233..db") where User='root';
+
+https://askubuntu.com/questions/668734/the-requested-url-phpmyadmin-was-not-found-on-this-server
