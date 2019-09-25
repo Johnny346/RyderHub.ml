@@ -58,6 +58,9 @@ angular.module('app').factory('Authentication',
             $location.path('/login');
         },
         register: function(registerUser) {
+            console.log("trying to register these details "+ registerUser.ryderid +" " + registerUser.email
+            +" " + registerUser.username1 +" " + registerUser.city  +" " +registerUser.password);
+
             $http({
                 url: 'http://77.68.25.40:443/phpfiles/serverRegisterUser.php',
                 method: 'Post',
@@ -70,7 +73,7 @@ angular.module('app').factory('Authentication',
                     +'&name='+ registerUser.username1
                     +'&city='+ registerUser.city
                     +'&password='+ registerUser.password
-                    +'&repass='+ registerUser.repass
+                    
                 
             }).then(function(response){
                 if(response.data.status == 'registered'){ 
