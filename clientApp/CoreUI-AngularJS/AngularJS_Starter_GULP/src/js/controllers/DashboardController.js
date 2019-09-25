@@ -19,7 +19,7 @@ angular.module('app').controller('DashboardController', ['$scope', 'Authenticati
 
         
               $http({
-                url: 'http://192.168.0.122/phpfiles/dashboardGetMainData.php',
+                url: 'http://77.68.25.40/phpfiles/dashboardGetMainData.php',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -156,7 +156,7 @@ angular.module('app').controller('DashboardController', ['$scope', 'Authenticati
         console.log("userchart finishdate " +endDate);
         console.log("user email " +email);
               $http({
-                url: 'http://192.168.0.122/phpfiles/dashboardGetUpdatedMainData.php',
+                url: 'http://77.68.25.40/phpfiles/dashboardGetUpdatedMainData.php',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'

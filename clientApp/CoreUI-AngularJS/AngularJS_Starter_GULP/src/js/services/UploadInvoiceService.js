@@ -29,7 +29,7 @@ angular.module('app').factory('UploadInvoiceService',
             }
             
             $http({
-                url: 'http://192.168.0.122/phpfiles/upload.php',
+                url: 'http://77.68.25.40/phpfiles/upload.php',
                 method: 'Post',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'

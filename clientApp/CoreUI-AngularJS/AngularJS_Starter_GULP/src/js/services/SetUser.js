@@ -27,7 +27,7 @@ angular.module("app")
   service.getRyderID = function(email) {
     console.log("SetUser email" +email);
           $http({
-            url: 'http://192.168.0.122/phpfiles/getRyderID.php',
+            url: 'http://77.68.25.40/phpfiles/getRyderID.php',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

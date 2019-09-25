@@ -86,6 +86,7 @@ if($response['id'] != null){
     if(mysqli_num_rows($resultGOUD) > 0) {
         while ($row = mysqli_fetch_array($resultGOUD, MYSQLI_ASSOC)) {
             $oldestUserDate =  $row["MIN(workdate)"];
+	    $response['earliestWorkDate'] = $oldestUserDate;
         }
     } else{
             $response['status'] = 'error';

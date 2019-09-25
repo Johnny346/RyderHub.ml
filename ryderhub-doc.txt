@@ -148,18 +148,26 @@ CREATE USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'Number2233..db';
 GRANT ALL PRIVILEGES ON * . * TO 'php'@'localhost';
 REVOKE ALL PRIVILEGES ON * . * FROM 'php'@'localhost';
 
+CREATE USER 'ryderdbuser'@'localhost' IDENTIFIED BY 'Number2233..db';
+GRANT ALL PRIVILEGES ON *.* TO 'ryderdbuser'@'localhost' WITH GRANT OPTION;
 SHOW GRANTS FOR 'php'@'localhost';
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Number2233..db';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Number2233..dbNumber2233..db';
 sudo service mysql restart
-
+ALTER USER 'phpmyadmin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Number2233..db';
 changes apache2 listen port from 80 to 443
 change port link in two files
 sudo nano /var/www/myryderhub/info.php
 php code docs
-
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 java software applications docs
 
 update user set authentication_string=PASSWORD("Number2233..db") where User='root';
 
 https://askubuntu.com/questions/668734/the-requested-url-phpmyadmin-was-not-found-on-this-server
+
+77.68.25.40
+
+npm run build
+create dir called dist then change to public
+npm start

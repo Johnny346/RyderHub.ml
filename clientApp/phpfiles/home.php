@@ -12,15 +12,15 @@
                 <h5>Enter number of shifts in the invoice</h5>
                 <br/>
                 Enter your ryderid
-                <input type="text" name="ryderid" size="20" maxlength="15" requ$
+                <input type="text" name="ryderid" size="20" maxlength="15">
 
                 Enter the invoice date
-                <input type="date" name="invoicedate" size="20" maxlength="15" $
+                <input type="date" name="invoicedate" size="20" maxlength="15">
                 <input value="Submit" type="submit"/>
         </form>
 
 <a href="test-select-functions.php">test select functions</a>
-<a href="total-pay.php">show total pay</a>
+<a href="totalpay.php">show total pay</a>
 <a href="fileupload.php">Upload file</a>
 </body>
 </html>

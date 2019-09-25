@@ -37,7 +37,7 @@ angular.module('app').controller('UploadInvoicesController', ['$scope', '$http',
                   
                                   
                   $.ajax({
-                      url: 'http://192.168.0.122/phpfiles/upload.php', // point to server-side PHP script 
+                      url: 'http://77.68.25.40/phpfiles/upload.php', // point to server-side PHP script 
                       dataType: 'text',  // what to expect back from the PHP script, if anything
                       cache: false,
                       contentType: false,

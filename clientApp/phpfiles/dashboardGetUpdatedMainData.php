@@ -118,7 +118,7 @@ if($response['id'] != null){
     }
     // data for large chart, between x date and y date
     // return array of data daily orders
-    $queryDataDailyOrders = "SELECT orders as weeklyOrders FROM shiftlog WHERE workdate BETWEEN $startDate AND $endDate and ryder_id = '$ryderID'";
+    $queryDataDailyOrders = "SELECT orders as weeklyOrders FROM shiftlog WHERE workdate BETWEEN '$startDate' AND '$endDate' and ryder_id = '$ryderID'";
     
     $resultDDO = mysqli_query($dbc, $queryDataDailyOrders);
     
@@ -130,7 +130,7 @@ if($response['id'] != null){
                 $response['status'] = 'error';
         } 
     //return daily hours
-    $queryDataDailyHours = "SELECT hours FROM shiftlog WHERE workdate BETWEEN $startDate AND $endDate and ryder_id = '$ryderID'";
+    $queryDataDailyHours = "SELECT hours FROM shiftlog WHERE workdate BETWEEN '$startDate' AND '$endDate' and ryder_id = '$ryderID'";
     $resultDDH = mysqli_query($dbc, $queryDataDailyHours);
     
         if(mysqli_num_rows($resultDDH) > 0) {
@@ -141,7 +141,7 @@ if($response['id'] != null){
                 $response['status'] = 'error';
         } 
     // return  earning
-    $queryDataDailyEarnings = "SELECT pay FROM shiftlog WHERE workdate BETWEEN $startDate AND $endDate and ryder_id = '$ryderID'";
+    $queryDataDailyEarnings = "SELECT pay FROM shiftlog WHERE workdate BETWEEN '$startDate' AND '$endDate' and ryder_id = '$ryderID'";
     $resultDDE = mysqli_query($dbc, $queryDataDailyEarnings);
     
         if(mysqli_num_rows($resultDDE) > 0) {

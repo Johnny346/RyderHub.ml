@@ -83,7 +83,7 @@ CREATE TABLE `ryderinfo` (
   `ryderid` varchar(15) NOT NULL,
   `name` varchar(60) NOT NULL,
   `city` varchar(40) NOT NULL,
-  `pass` char(10) NOT NULL,
+  `pass` char(15) NOT NULL,
   `email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -92,8 +92,8 @@ CREATE TABLE `ryderinfo` (
 --
 
 INSERT INTO `ryderinfo` (`ryderid`, `name`, `city`, `pass`, `email`) VALUES
-('92306', 'John', 'Cork', '2', ''),
-('92307', 'bob', 'city', '2', '');
+('92306', 'John', 'Cork', 'Number2233..', 'johnmulcahy346@gmail.com'),
+('92307', 'demo', 'city', 'password', 'demo@email.com');
 
 -- --------------------------------------------------------
 
