@@ -23,6 +23,26 @@
                 <p class="error validationerror" ng-show="registerForm.ryderid.$invalid && registerForm.ryderid.$touched">
                   Please enter your Ryder ID
                 </p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" name="username1" class="form-control" placeholder="Name"
+                  ng-model="registerUser.username1" ng-reguired="true" required pattern=".{3,}">
+                </div>
+                <p class="error validationerror" ng-show="registerForm.username1.$invalid && registerForm.username1.$touched">
+                  Please enter your Name
+                </p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" name="city" class="form-control" placeholder="City"
+                  ng-model="registerUser.city" ng-reguired="true" required pattern=".{3,}">
+                </div>
+                <p class="error validationerror" ng-show="registerForm.city.$invalid && registerForm.city.$touched">
+                  Please enter your City/Town
+                </p>
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">

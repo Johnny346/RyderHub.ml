@@ -67,6 +67,8 @@ angular.module('app').factory('Authentication',
                 data: 
                     'ryderid='+registerUser.ryderid
                     +'&email='+ registerUser.email
+                    +'&name='+ registerUser.username1
+                    +'&city='+ registerUser.city
                     +'&password='+ registerUser.password
                     +'&repass='+ registerUser.repass
                 
