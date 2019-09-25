@@ -7,7 +7,7 @@ angular.module('app').factory('Authentication',
             //$rootScope.message = "welcome to my app " + user.email;
             
             $http({
-                url: 'http://77.68.25.40/phpfiles/server.php',
+                url: 'http://77.68.25.40:443/phpfiles/server.php',
                 method: 'Post',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -59,7 +59,7 @@ angular.module('app').factory('Authentication',
         },
         register: function(registerUser) {
             $http({
-                url: 'http://77.68.25.40/phpfiles/serverRegisterUser.php',
+                url: 'http://77.68.25.40:443/phpfiles/serverRegisterUser.php',
                 method: 'Post',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
