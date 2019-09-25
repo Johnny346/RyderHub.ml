@@ -46,6 +46,7 @@ cleaned up dashboard view a little
 * before going live i must encript password and change scripts + verify
 4, display information from DB view stats
 7, get code all runnning and connected together
+8, get on a real server exposed to the internet
 can now select between two dates to view data in dashboard
 live server set up:
 created a user john
@@ -62,27 +63,28 @@ change ip address to working url domain name
 need to install java 
 need to set up and install database
 mysql create root user i think
+need to install mysql and php
+change ip address to working url domain name
+set up php to upload files set upload dir
+create cache dir
+need to install java 
+
 
 work todo today:
 ----------------------
+add windy weather api
 
-need to install mysql and php
-set up php to upload files set upload dir
-create cache dir
-add php files
-change ip address to working url domain name
-need to install java 
 restart dashboardcntrl authenticatation for production version
 build dist version
 
-two know issues
+two known issues
 1. missing pay information in shiftlog table in database
 2. not all invoices got uploaded from gmail only from 2018-7-0
 
 5, test processes invoices fix known 8/9 bug document
 6, create webpage to showcase ryderhub platform and capabilities
 
-8, get on a real server exposed to the internet
+
 9, get 5 to 10 users to test it
 9.1, output to log files what is being uploaded ie user stats
 10, show to deliveroo and try to sell idea to them or ask for a job
@@ -171,3 +173,10 @@ https://askubuntu.com/questions/668734/the-requested-url-phpmyadmin-was-not-foun
 npm run build
 create dir called dist then change to public
 npm start
+
+
+mysql -u John -p ryderdatabase < ryderdatabase.sql
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04#conclusion
+
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/"
