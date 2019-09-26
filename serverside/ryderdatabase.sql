@@ -83,7 +83,7 @@ CREATE TABLE `ryderinfo` (
   `ryderid` varchar(15) NOT NULL,
   `name` varchar(60) NOT NULL,
   `city` varchar(40) NOT NULL,
-  `pass` char(15) NOT NULL,
+  `pass` varchar(50) NOT NULL,
   `email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
