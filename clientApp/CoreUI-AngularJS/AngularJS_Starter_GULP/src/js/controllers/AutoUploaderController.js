@@ -27,7 +27,7 @@ angular.module('app').controller('AutoUploaderController',
    
        
         $http({
-          url: 'http://77.68.25.40/Upload',
+          url: 'http://77.68.25.40:8081/Upload',
           method: 'POST',
           headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
