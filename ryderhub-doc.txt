@@ -73,6 +73,7 @@ need to install java
 work todo today:
 ----------------------
 add windy weather api
+need to ciper password from autoupload to jar gmail
 
 restart dashboardcntrl authenticatation for production version
 build dist version
