@@ -39,15 +39,15 @@ angular.module('app').factory('Authentication',
             }); 
         },
         requireAuth: function(){
-            // console.log("working here----------------------------------" + $rootScope.currentUser);
-            // if (!SetUser.isUserLoggedIn() && $rootScope.currentUser ==undefined){
-            //     console.log("running ---" + SetUser.isUserLoggedIn());
-            //     $location.path('/login');
-            //     return false;
-            // }else {
-            //     console.log("running false");
-            //     return true;
-            // }
+            console.log("working here----------------------------------" + $rootScope.currentUser);
+            if (!SetUser.isUserLoggedIn() && $rootScope.currentUser ==undefined){
+                console.log("running ---" + SetUser.isUserLoggedIn());
+                $location.path('/login');
+                return false;
+            }else {
+                console.log("running false");
+                return true;
+            }
             
         },
         logout: function() {

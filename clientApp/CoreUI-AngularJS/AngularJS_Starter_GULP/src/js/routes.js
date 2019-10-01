@@ -70,7 +70,7 @@ function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbPro
     params: { subtitle: 'Welcome to ROOT powerfull Bootstrap & AngularJS UI Kit' },
     resolve: {
       currentAuth: function(Authentication){
-        //return Authentication.requireAuth();
+        return Authentication.requireAuth();
       },
       loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
         // you can lazy load files for an existing module
