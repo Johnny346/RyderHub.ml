@@ -20,7 +20,7 @@ angular.module('app').factory('Authentication',
                     $rootScope.currentUser = user.email;
                     SetUser.userLoggedIn();
                     localStorage.setItem("userEmail",user.email);
-                    
+                    localStorage.setItem("userLoggedIn","true");
                     localStorage.setItem("ryderID",SetUser.getRyderID(user.email));
                     $rootScope.email = SetUser.setEmail(user.email);
                     console.log("user email "+SetUser.getEmail());
@@ -39,8 +39,9 @@ angular.module('app').factory('Authentication',
             }); 
         },
         requireAuth: function(){
-            console.log("working here----------------------------------" + $rootScope.currentUser);
-            if (!SetUser.isUserLoggedIn() && $rootScope.currentUser ==undefined){
+            console.log("working here-----------------user logged in: ------------ " + localStorage.getItem("userLoggedIn"));
+            var testUserLogIn = localStorage.getItem("userLoggedIn");
+            if (!testUserLogIn == "true"){
                 console.log("running ---" + SetUser.isUserLoggedIn());
                 $location.path('/login');
                 return false;
@@ -53,6 +54,7 @@ angular.module('app').factory('Authentication',
         logout: function() {
             console.log("pushing button in auth service");
             SetUser.userLoggedOut();
+            localStorage.setItem("userLoggedIn","false");
             console.log("logging out user"+ SetUser.isUserLoggedIn() + " currentuser " + $rootScope.currentUser);
             $rootScope.currentUser = ' ';
             $location.path('/login');

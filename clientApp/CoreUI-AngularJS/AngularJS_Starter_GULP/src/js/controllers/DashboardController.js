@@ -3,7 +3,8 @@ angular.module('app').controller('DashboardController', ['$scope', 'Authenticati
  function($scope, Authentication, $location, SetUser, $http){
     $scope.message = "welcome to my app";
     
-    if(!SetUser.isUserLoggedIn()){
+    var testUserLogIn = localStorage.getItem("userLoggedIn");
+    if (!testUserLogIn == "true"){
         console.log("-----------------------------------------------------------" + SetUser.isUserLoggedIn());
         $location.path('views/pages/login.html');
     }else {
