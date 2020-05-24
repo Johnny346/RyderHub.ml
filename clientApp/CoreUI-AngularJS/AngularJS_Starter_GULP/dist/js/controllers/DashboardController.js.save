@@ -2,10 +2,7 @@ angular.module('app').controller('DashboardController', ['$scope', 'Authenticati
  '$location','SetUser', '$http',
  function($scope, Authentication, $location, SetUser, $http){
     $scope.message = "welcome to my app";
-     $scope.incomeTax;
-        $scope.usc;
-        $scope.prsi;
-
+    
     var testUserLogIn = localStorage.getItem("userLoggedIn");
     if (!testUserLogIn == "true"){
         console.log("-----------------------------------------------------------" + SetUser.isUserLoggedIn());
@@ -152,7 +149,49 @@ angular.module('app').controller('DashboardController', ['$scope', 'Authenticati
                     },
                 }
             }
-       
+         // tax calc section start
+	$scope.incomeTax;
+	$scope.usc;
+	$scope.prsi;
+
+function taxCalc(income){
+console.log("tax calc running"+ income);
+
+    if(income <= 33800){
+        //income tax @ 20%
+        $scope.incomeTax = getPerc(income,20);
+	console.log("income: "+income+", tax: "+$scope.incomeTax );
+
+    }
+    if(income > 33800){
+        //income tax <=33800 @ 20%
+        $scope.incomeTaxLower = getPerc(income,20);
+        //income -33800 is taxed @ 40%
+        $scope.incomeTax= getPerc(income-33800,40)+ $scope.incomeTaxLower;
+    }
+
+    if(income >=13000){
+        //usc 
+        //12012 taxed @ 0.5%
+        //next 7862 taxed @2%
+        //next 50672 taxed @4.5%
+        $scope.usc = getPerc(income,3);
+
+    }else{
+	$scope.usc = 0;
+	}
+    if(income >=5000){
+        //prsi
+        //all taxed @ 0.4%
+        $scope.prsi= getPerc(income,4);
+
+    }
+}
+	function getPerc(num, percent) {
+   		 return ((Number(percent) / 100) * Number(num));
+	}
+
+	// tax calc section end   
       };
 	$scope.getWeatherData = function() {
         
@@ -197,54 +236,6 @@ function getTime(unix_timestamp){
 
     $scope.getMainDashboardData($scope.userchart);
     
-//tax calc section
-function taxCalc(income){
-    console.log("tax calc running"+ income);
-    
-        if(income <= 33800){
-    
-         //income tax @ 20%
-         $scope.incomeTaxT = getPerc(income,20);
-         // less 1500 tax credit
-        if(income > 3000){
-	 $scope.incomeTax = $scope.incomeTaxT -1500;
-        }else{
-	  $scope.incomeTax = $scope.incomeTaxT;
-	}
-	 console.log("income: "+income+", tax: "+$scope.incomeTax );
- 	if($scope.incomeTax <0){
-	   $scope.incomeTax =  0;
-	}
-     }
-     if(income > 33800){
-         //income tax <=33800 @ 20%
-         $scope.incomeTaxLower = getPerc(income,20);
-        //income -33800 is taxed @ 40%
-        $scope.incomeTax= getPerc(income-33800,40)+ $scope.incomeTaxLower;
-    }
-
-    if(income >=13000){
-        //usc
-        //12012 taxed @ 0.5%
-        //next 7862 taxed @2%
-        //next 50672 taxed @4.5%
-        $scope.usc = getPerc(income,3);
-
-    }else{
-        $scope.usc = 0;
-        }
-    if(income >=5000){
-        //prsi
-        //all taxed @ 0.4%
-        $scope.prsi= getPerc(income,4);
-
-    }
-}
-    function getPerc(num, percent) {
-             return ((Number(percent) / 100) * Number(num));
-    }
-
-    // tax calc section end
     $scope.updateMainDashboardData = function(userchart) {
         var email = localStorage.getItem("userEmail");
         var endDate = userchart.finishDate.getFullYear() + "-" + (userchart.finishDate.getMonth()+1)
@@ -269,9 +260,8 @@ function taxCalc(income){
                     ryderID = response.data.id;
                     //console.log(response.data.id);
                     $scope.totalIncome = response.data.totalIncome;
-                    taxCalc($scope.totalIncome);
-
-		    $scope.totalHours = response.data.totalHours;
+		
+                    $scope.totalHours = response.data.totalHours;
                     $scope.avgWeeklyPay = response.data.avgWeeklyPay;
                     $scope.avgDailyOrders = response.data.avgDailyOrders;
                     console.log("response startDate  "+ response.data.startDate); 

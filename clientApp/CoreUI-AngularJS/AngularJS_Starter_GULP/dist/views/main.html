@@ -39,6 +39,28 @@
           - talk and share info with ryders 
         </div>
       </div>
+<div   ng-contoller="WeatherDataController">
+   <h2 style="padding:5px">Weather Information </h2>
+<hr/>
+<div class="row" style= "padding:10px">
+    <div class="col-sm-6 col-lg-6">
+        <h4>Weather condition: {{description}}</h4>
+        <h4>Tempurature: {{temp}} Celcius</h4>
+        <h4>Wind Speed: {{windSpeed}} m/s</h4>
+        <h4>Wind direction: {{windDegrees}} &#176</h4>
+    </div>
+    <div class="col-sm-6 col-lg-6">
+        <h4>Region: {{region}}</h4>
+        <h4>Sunset: {{sunset}} pm</h4>
+        <h4>Sunrise: {{sunrise}} am</h4>
+        <button type="button" title="Get weather data" ng-click="getWeatherData()"class="btn btn-primary float-left">
+            <i class="icon-cloud-download"></i>
+        </button>
+    </div>
+</div>
+
+        
+  </div>
     </div>
   </div>
   
@@ -137,10 +159,15 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
-          <h4 class="card-title mb-0">Orders Completed</h4>
-          
+          <h4 class="card-title mb-0">Analysis of Orders Completed</h4>
+          <br/>
           <form name='chartForm'>
-            <div  ng-show="userstartDate">First registered date {{ userstartDate}}</div>
+            <div  ng-show="userstartDate">
+		<p>First work date {{ userstartDate}}
+		<br/>
+		 Last registered work date {{ userLastDate}}</p>
+
+	    </div>
             <div class="largechart" >
              
               Start
@@ -205,7 +232,65 @@
   </div>
   <!--/.card-->
 
-
-
+<div class="card">
+    <div class="card-header" id="headingOne">
+        <div>
+            <h3>Tax calculator / Estimation</h3>
+        </div>
+    </div>
+    <div class="row" style="padding: 12px">
+        <div class="col-sm-6 col-lg-6">
+            <h5>Start Date: {{ userstartDate}} </h5>
+           
+            <h5>End Date: {{ userLastDate}} </h5>
+           <hr/>
+	
+          <h4 class="mb-0">Total Income: {{totalIncome | currency : "€"}}</h4>
+	    <br/>
+            <h5>Income Tax: {{incomeTax | currency : "€"}}</h5>
+            <br/>
+            <h5>USC: {{usc | currency : "€"}}</h5>
+            <br/>
+            <h5>PRSI: {{prsi | currency : "€"}}</h5>
+            <br/>
+            <h5>Total Tax to pay:<span style="text-decoration: underline"> {{incomeTax+prsi+usc | currency : "€"}}</span> </h5>
+	    </hr>
+        </div>
+        <div class="col-sm-6 col-lg-6">
+		<h3>Self Employed Tax Information<h3/>
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseIdA" aria-expanded="true" aria-controls="collapseIdA">
+                <h4>USC Info</h4>
+            </button>
+            <div id="collapseIdA" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    USC is a tax you pay on your gross income. Everyone earning over €13,000 (2016, 2017) gross income is liable to pay USC.
+                </div>
+            </div>
+	    <br/>
+            <hr/>
+	   <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseIdB" aria-expanded="true" aria-controls="collapseIdB">
+                <h4>PRSI Info</h4>
+            </button>
+            <div id="collapseIdB" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    PRSI contributions are paid at
+                     a rate of 4% on all income
+                </div>
+            </div>
+	    <br/>
+            <hr/>
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseIdC" aria-expanded="true" aria-controls="collapseIdC">
+                <h4>Income Tax Info</h4>
+            </button>
+            <div id="collapseIdC" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    Income Tax is paid: 20% for income upto 33,800 & 40% for income above 33,800
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+</div>
+<!-- end tax calc card -->
 
 </div>

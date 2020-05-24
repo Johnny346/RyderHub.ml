@@ -91,6 +91,17 @@ if($response['id'] != null){
     } else{
             $response['status'] = 'error';
     }
+    
+    $queryGetNewestUserDate = "SELECT MAX(workdate) FROM shiftlog WHERE ryder_id = '$ryderID'";
+    $resultGNUD = mysqli_query($dbc, $queryGetNewestUserDate);
+    if(mysqli_num_rows($resultGNUD) > 0) {
+        while ($row = mysqli_fetch_array($resultGNUD, MYSQLI_ASSOC)) {
+            $newestUserDate =  $row["MAX(workdate)"];
+	        $response['newestWorkDate'] = $newestUserDate;
+        }
+    } else{
+            $response['status'] = 'error';
+    }
 
     $queryAVGWeeklyEarnings = "SELECT avg(pay) FROM ( SELECT WEEK(workdate) weeks,sum(pay) as pay FROM shiftlog WHERE workdate BETWEEN $oldestUserDate AND CURDATE() and ryder_id = '$ryderID' GROUP BY WEEK(workdate) ORDER BY workdate ) as inner_query";
     $resultAVGWE = mysqli_query($dbc, $queryAVGWeeklyEarnings);

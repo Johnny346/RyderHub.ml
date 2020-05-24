@@ -90,7 +90,8 @@ function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbPro
         return $ocLazyLoad.load({
           files: [
             'js/controllers/main.js',
-            'js/controllers/DashboardController.js'
+            'js/controllers/DashboardController.js',
+	    'js/controllers/WeatherDataController.js'
           ]
         });
       }],
